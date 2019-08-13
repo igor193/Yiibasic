@@ -1,12 +1,14 @@
 <?php
 
 namespace app\controllers\actions;
+use app\models\Activity;
 
 use yii\base\Action;
 
 class ActivityCreateAction extends Action {
 
     public function run() {
-        return $this->controller->render('create');
+        $model = new Activity();
+        return $this->controller->render('create', ['model'=>$model]);
     }
 }
